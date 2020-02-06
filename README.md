@@ -94,3 +94,7 @@ yield(loader, "queue_finished")
 # Display the main screen
 # ...
 ```
+
+## License
+
+WTFPL. Do whatever you want.
