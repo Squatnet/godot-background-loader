@@ -34,15 +34,15 @@ You can yield to this signal if you want to, for instance, display a loading scr
 
 ### Other methods
 
-**clear_queue()**
+**loader.clear_queue()**
 
 Clear everything in the queue. If something is busy loading it will finish.
 
-**clear_resources()**
+**loader.clear_resources()**
 
 Clear cache of resources that have been loaded already.
 
-**get_progress()**
+**loader.get_progress()**
 
 Get the progress of the currently loading object as a float between 0 and 1.
 
