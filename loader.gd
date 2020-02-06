@@ -22,15 +22,20 @@ var _curr_path = null
 const LOGGING_ENABLED = true
 
 # Add a resource to the back of the loading queue
-func queue(id, path):
+func queue(id, path, push_front=false):
 	if path == null or path == "" or not _file.file_exists(path):
 		_log("Error: Trying to load invalid path %s" % path)
 		return
 
-	_queue.push_back({
+	var data = {
 		"id": id,
 		"path": path
-	})
+	}
+
+	if push_front:
+		_queue.push_front(data)
+	else:
+		_queue.push_back(data)
 
 	set_process(true)
 

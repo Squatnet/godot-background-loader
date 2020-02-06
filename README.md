@@ -18,10 +18,11 @@ Add loader.gd as an AutoLoad.
 
 General usage of this library involves the following 2 functions:
 
-**loader.queue(id, path)**
+**loader.queue(id, path, push_front=false)**
 
 Queue the ".tscn" or ".gd" object for loading and associate it with _id_.
 When it has completed loading, the `resource_loaded` signal will be emitted for _id_.
+There is an optional "push_front" parameter if you want to prioritize this resource.
 
 **loader.instance(id)**
 
