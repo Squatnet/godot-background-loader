@@ -18,12 +18,12 @@ Add loader.gd as an AutoLoad.
 
 There are only 2 functions you need to know to use this library:
 
-*loader.queue(id, path)*
+**loader.queue(id, path)**
 
 Queue the ".tscn" or ".gd" object for loading and associate it with _id_.
 When it has completed loading, the `resource_loaded` signal will be emitted for _id_.
 
-*loader.instance(id)*
+**loader.instance(id)**
 
 Get a new instance of the resource associated with _id_.
 If you call this method while the resource is being loaded or is still in the queue,
@@ -34,15 +34,15 @@ You can yield to this signal if you want to, for instance, display a loading scr
 
 ### Other methods
 
-*clear_queue()*
+**clear_queue()**
 
 Clear everything in the queue. If something is busy loading it will finish.
 
-*clear_resources()*
+**clear_resources()**
 
 Clear cache of resources that have been loaded already.
 
-*get_progress()*
+**get_progress()**
 
 Get the progress of the currently loading object as a float between 0 and 1.
 
