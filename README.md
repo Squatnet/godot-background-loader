@@ -16,7 +16,7 @@ Add loader.gd as an AutoLoad.
 
 ### Overview
 
-There are only 2 functions you need to know to use this library:
+General usage of this library involves the following 2 functions:
 
 **loader.queue(id, path)**
 
